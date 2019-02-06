@@ -1,0 +1,9 @@
+network.host: "0.0.0.0"
+http.port: 9200
+
+script.inline: true
+
+node.master: true
+node.data: true
+node.ingest: false
+discovery.zen.minimum_master_nodes: 1
