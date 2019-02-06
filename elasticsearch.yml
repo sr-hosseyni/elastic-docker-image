@@ -1,0 +1,17 @@
+network.host: "0.0.0.0"
+http.port: 9200
+
+script.inline: true
+
+bootstrap.memory_lock: true
+node.master: true
+node.data: true
+node.ingest: false
+
+cluster.remote.connect: false
+
+discovery.zen.minimum_master_nodes: 1
+discovery.zen.ping.unicast.hosts: elasticsearch-master-2
+
+xpack.security.enabled: false
+xpack.monitoring.enabled: false
