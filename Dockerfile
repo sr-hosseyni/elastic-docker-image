@@ -48,8 +48,8 @@ RUN apk add --no-cache -t .build-deps wget ca-certificates gnupg openssl \
   && rm -rf /tmp/* \
   && apk del --purge .build-deps
 
-COPY config/elastic /usr/share/elasticsearch/config
-COPY config/logrotate /etc/logrotate.d/elasticsearch
+COPY config /usr/share/elasticsearch/config
+COPY logrotate /etc/logrotate.d/elasticsearch
 COPY start.sh /
 COPY docker-healthcheck /usr/local/bin/
 
